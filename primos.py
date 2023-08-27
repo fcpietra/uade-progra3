@@ -1,5 +1,3 @@
-import math
-
 def primo (n):
     return(n**2+n+41)
 
