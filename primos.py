@@ -1,5 +1,7 @@
+import math
+
 def primo (n):
-    return(n*n+n+41)
+    return(n**2+n+41)
 
 def esPrimo(primo):
     for n in range(2,primo//2):
