@@ -4,7 +4,7 @@ def primo (n):
 def esPrimo(primo):
     for n in range(2,primo//2):
         if primo % n  == 0:
-            print("NO es primo")
+            print("NO es primo:", n)
 
 for div in range (1,100):
     print ("n es ", div)
