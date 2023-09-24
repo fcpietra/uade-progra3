@@ -1,3 +1,7 @@
+
+import random
+import time
+
 def Mystery (array):
     i = 0
     j=0
@@ -21,12 +25,24 @@ def MysteryMejor (array):
     array.sort()
     for i in array:
         c+=1
-        m=c
-        if(array[i] != array[i-1]):
-            c=0
-    return m - 1
+        if (c>m):
+            m=c
+            if(array[i] != array[i-1]):
+                c=0
+    return m
 
 
 ## TEST
-print(Mystery([2,2,3,3,4,4,4,5,5,5,5,5,5,5,5,5]))
-print(MysteryMejor([2,2,3,3,4,4,4,5,5,5,5,5,5,5,5,5,5]))
+arr=[]
+for i in range (1,5000):
+    arr.append(random.randint(1,50))
+
+start_time = time.time()
+print(Mystery(arr))
+end_time = time.time()
+print('Duration: {}'.format(end_time - start_time))
+
+start_time2 = time.time()
+print(MysteryMejor(arr))
+end_time2 = time.time()
+print('Duration: {}'.format(end_time2 - start_time2))
